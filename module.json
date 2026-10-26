@@ -1,6 +1,6 @@
 {
   "id": "pf2e-trigger-animations-trove",
-  "title": "Trigger Animation Trove (PF2e / SF2e)",
+  "title": "Trigger Animation Trove (PF2e / SF2e) TONVAL changes",
   "description": "Animations for the Trigger Animation module specifically for the Pathfinder 2e and Starfinder 2e systems",
   "version": "#{VERSION}#",
   "library": "false",
