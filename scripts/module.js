@@ -74,6 +74,19 @@ function registerPresets() {
       .scaleIn(0.5, 750, { ease: "easeOutBack" });
   });
 
+  // Still Image Pop up Top of Character
+  Sequencer.Presets.add("troveIconBottom", (effect, args) => {
+    return effect
+      .scaleToObject(0.3)
+      .anchor({ x: 0.5, y: -0.3 })
+      .spriteAnchor({ x: 0.5, y: -0.3 })
+      .duration(2500)
+      .fadeIn(500)
+      .fadeOut(1500)
+      .scaleOut(0.3, 1500, { ease: "easeInQuad" })
+      .scaleIn(0.3, 750, { ease: "easeOutBack" });
+  });  
+
   // Sequencer.Presets.add(
   //   "trovePF2eConeHelper",
   //   (effect, args) => {
