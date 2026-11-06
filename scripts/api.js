@@ -2,7 +2,10 @@ import { askToAddNewAnimationsDialog } from "./enableNewAnimations.js";
 import { askToEnableNewTriggersDialog } from "./enableNewTriggers.js";
 import { getCastSpellAnimationItems } from "./lib/cast-animation.js";
 // import { getEmanationWidth } from "./helper.js";
-import { tokenCrosshairHelper } from "./lib/helpers.js";
+import {
+  getCurrentScreenPositionData,
+  tokenCrosshairHelper,
+} from "./lib/helpers.js";
 
 export function setupAPI() {
   window.triggerAnimationsTrove = {
@@ -12,7 +15,9 @@ export function setupAPI() {
       helpers: {
         tokenCrosshairHelper,
         getCastSpellAnimationItems,
+        getCurrentScreenPositionData,
       },
     },
+    flags: {},
   };
 }

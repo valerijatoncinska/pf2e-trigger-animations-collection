@@ -9,7 +9,11 @@
 
 # Trigger Animation Trove (PF2e / SF2e)
 
+### Features
+
 Pack of animations for Trigger Animations! See the fully supported list [here](/ANIMATION_LIST.md)
+
+It also supports a set of automatic token image updates for spells like Insect Form, see the list [here](/TOKEN_IMAGES.md)
 
 ### Trove Animation Quirks
 
@@ -23,15 +27,15 @@ The following are triggers specific to Trigger Animation Trove, for all other tr
 | Template                        | `template:item-slug`                               | `trove-template:item-slug`                               |
 | Effect / Condition Badge Update | `none`                                             | `update:item-slug`                                       |
 | Damage Roll                     | `none`                                             | `damage-roll:item-slug`                                  |
+| Damage Roll + Addon (Sneak Atk) | `none`                                             | `damage-roll-addon:damage-slug`                          |
+| Exploration Activity Activated  | `none`                                             | `exploration:action-slug`                                |
 | Reload                          | `none`                                             | `reload:weapon-slug`                                     |
 | Skill Action Rolled             | `none`                                             | `action:action-slug`                                     |
 | Spell Message                   | `none`                                             | `spell:spell-slug`                                       |
 | Roll Option Update              | `none`                                             | `update:item-slug`                                       |
 
-
 **Spellcasting Helper Setup**
 <img width="1200" height="922" alt="image" src="https://github.com/user-attachments/assets/0f5bdabd-c37c-4b2a-83e7-37dd9a1b64a6" />
-
 
 The following are presets for particular sources
 
