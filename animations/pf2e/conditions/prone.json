@@ -59,6 +59,9 @@
         },
         "attachTo": {
           "value": true
+        },
+        "bindRotation": {
+          "value": false
         }
       },
       "outs": {
@@ -323,5 +326,5 @@
   "name": "Prone",
   "description": "<p>Written by @Chasarooni</p>",
   "folder": "Conditions",
-  "id": "g8R0X88isfO0y8t3"
+  "id": "tGSVq0waPQ7EIui9"
 }

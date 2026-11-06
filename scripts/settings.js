@@ -2,17 +2,41 @@ import {
   askToAddNewAnimationsDialog,
   getAnimationsToAddAndUpdateFlags,
 } from "./enableNewAnimations.js";
-import { askToEnableNewTriggersDialog } from "./enableNewTriggers.js";
+import {
+  hasImageMappingModule,
+  setupTokenImageFormHooks,
+} from "./lib/token-forms.js";
 import { MODULE_ID } from "./module.js";
 
 export function setupSettings() {
   game.settings.registerMenu(MODULE_ID, "force-refresh-menu", {
-    name: `${MODULE_ID}.module-settings.force-refresh-menu.name`,
+    name: "",
     label: `${MODULE_ID}.module-settings.force-refresh-menu.label`,
     hint: `${MODULE_ID}.module-settings.force-refresh-menu.hint`,
     icon: "fas fa-arrows-rotate",
     type: ForceEnableAllAnimations,
     restricted: true,
+  });
+
+  game.settings.register(MODULE_ID, "token-image-form.enable", {
+    name: `${MODULE_ID}.module-settings.token-image-form.enable.name`,
+    hint: `${MODULE_ID}.module-settings.token-image-form.enable.hint`,
+    scope: "world",
+    config: hasImageMappingModule(),
+    type: Boolean,
+    default: hasImageMappingModule(),
+    onChange: (value) => {
+      setupTokenImageFormHooks(value);
+    },
+  });
+
+  game.settings.register(MODULE_ID, "do-pan-effects", {
+    name: `${MODULE_ID}.module-settings.do-pan-effects.name`,
+    hint: `${MODULE_ID}.module-settings.do-pan-effects.hint`,
+    scope: "user",
+    config: true,
+    type: Boolean,
+    default: true,
   });
 
   game.settings.register(MODULE_ID, "disable-trigger-enable-spam", {
